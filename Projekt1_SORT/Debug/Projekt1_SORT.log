@@ -1,0 +1,39 @@
+﻿  App.cpp
+c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\experiment.h(45): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\experiment.h(25): note: podczas kompilowania funkcji składowej „<Nieznany>” klasy klasa <Nieznany>
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\ui.h(82): note: zobacz odwołanie do funkcji szablon; wystąpienie „void Experiment<int>::Run(Experiment<int>::Algoritms,int,int,double,bool)” jest kompilowane
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\ui.h(82): note: zobacz odwołanie do klasy klasa szablon; wystąpienie „Experiment<int>” jest kompilowane
+c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\introsort.h(26): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\introsort.h(25): note: podczas kompilowania funkcji składowej „<Nieznany>” klasy klasa <Nieznany>
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\experiment.h(71): note: zobacz odwołanie do funkcji szablon; wystąpienie „void IntroSortT<int>::IntroSort(Array<T> &)” jest kompilowane
+          with
+          [
+              T=int
+          ]
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\experiment.h(25): note: podczas kompilowania funkcji składowej „<Nieznany>” klasy klasa <Nieznany>
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\ui.h(82): note: zobacz odwołanie do funkcji szablon; wystąpienie „void Experiment<int>::Run(Experiment<int>::Algoritms,int,int,double,bool)” jest kompilowane
+c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\heapsort.h(13): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\heapsort.h(13): note: podczas kompilowania funkcji składowej „<Nieznany>” klasy klasa <Nieznany>
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\heapsort.h(39): note: zobacz odwołanie do funkcji szablon; wystąpienie „int HeapSortT<T>::IdxParent(int)” jest kompilowane
+          with
+          [
+              T=int
+          ]
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\introsort.h(38): note: zobacz odwołanie do klasy klasa szablon; wystąpienie „HeapSortT<T>” jest kompilowane
+          with
+          [
+              T=int
+          ]
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\introsort.h(32): note: podczas kompilowania funkcji składowej „<Nieznany>” klasy klasa <Nieznany>
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\introsort.h(27): note: zobacz odwołanie do funkcji szablon; wystąpienie „void IntroSortT<int>::IntroSort(Array<T> &,int,int,int)” jest kompilowane
+          with
+          [
+              T=int
+          ]
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\introsort.h(25): note: podczas kompilowania funkcji składowej „<Nieznany>” klasy klasa <Nieznany>
+  c:\users\sliwa\source\pamsi\projekt1_sort\projekt1_sort\experiment.h(71): note: zobacz odwołanie do funkcji szablon; wystąpienie „void IntroSortT<int>::IntroSort(Array<T> &)” jest kompilowane
+          with
+          [
+              T=int
+          ]
+  Projekt1_SORT.vcxproj -> C:\Users\sliwa\source\PAMSI\Projekt1_SORT\Debug\Projekt1_SORT.exe
