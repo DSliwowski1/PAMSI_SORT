@@ -33,6 +33,7 @@ public:
 public:
 	void Generate();
 	void GenerateReverse();
+	void Mo3Killer();
 	bool CheckSorting();
 	void Concat(Array<T> end);
 	void Swap(int i, int j);
@@ -161,79 +162,6 @@ void Array<T>::Concat(Array<T> end)
 }
 
 
-/*
-template<typename T>
-void Array<T>::MergeSort()
-{
-	int n1, n2;
-	int size = this->GetSize();
-
-	if (size <= 1)
-		return;
-
-	if (size % 2 != 0)
-	{
-		n1 = size / 2;
-		n2 = n1 + 1;
-	}
-	else {
-		n1 = n2 = size / 2;
-	}
-
-	Array<T> S1(n1), S2(n2);
-
-	for (int i = 0; i < n1; i++)
-		S1[i] = (*this)[i];
-	for (int i = n1; i < size; i++)
-		S2[i - n1] = (*this)[i];
-
-	//cout << "S1, size: " << S1.GetSize() << endl << S1 << endl;
-	//cout << "S2, size: " << S2.GetSize() << endl << S2 << endl;
-
-	S1.MergeSort();
-	S2.MergeSort();
-
-	this->Merge(S1, S2);
-}
-
-
-template<typename T>
-void Array<T>::Merge(Array<T>& l, Array<T>& r)
-{
-	int i = 0;
-	int j = 0;
-	int k = 0;
-
-	while (i < l.GetSize() && j < r.GetSize())
-	{
-		if (l[i] <= r[j])
-		{
-			(*this)[k] = l[i];
-			i++;
-		}
-		else 
-		{
-			(*this)[k] = r[j];
-			j++;
-		}
-		k++;
-	}
-	while (i < l.GetSize())
-	{
-		(*this)[k] = l[i];
-		i++;
-		k++;
-	}
-	while (j < r.GetSize())
-	{
-		(*this)[k] = r[j];
-		j++;
-		k++;
-	}
-}
-
-*/
-
 template<typename T>
 bool Array<T>::CheckSorting()
 {
@@ -258,4 +186,27 @@ void Array<T>::Swap(int i, int j)
 	(*this)[i] = (*this)[j];
 	(*this)[j] = tmp;
 
+}
+
+template<typename T>
+void Array<T>::Mo3Killer()
+{
+	int n = this->GetSize();
+
+	if (n % 2 != 0) {
+		(*this)[n - 1] = n;
+		--n;
+	}
+	int m = n / 2;
+
+	for (int i = 0; i < m; ++i) {
+		if (i % 2 == 0)
+			(*this)[i] = i + 1;
+		else
+			if (m % 2 != 0)
+				(*this)[i] = m + i + 1;
+			else
+				(*this)[i] = m + i;
+		(*this)[m + i] = (i + 1) * 2;
+	}
 }

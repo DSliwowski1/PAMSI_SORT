@@ -43,14 +43,8 @@ void MergeSortT<T>::MergeSort(Array<T>& arr)
 		for (int i = n1; i < size; i++)
 			S2[i - n1] = arr[i];
 
-		//cout << "S1, size: " << S1.GetSize() << endl << S1 << endl;
-		//cout << "S2, size: " << S2.GetSize() << endl << S2 << endl;
-
 		MergeSortT<T>::MergeSort(S1);
 		MergeSortT<T>::MergeSort(S2);
-
-		//S1.MergeSort();
-		//S2.MergeSort();
 
 		MergeSortT<T>::Merge(arr, S1, S2);
 	}

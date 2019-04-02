@@ -16,12 +16,12 @@ class Experiment
 public:
 	enum Algoritms {merge, quick, intro};
 
-	static void Run(Algoritms alg, int ammount, int size, double prc, bool reverse);
+	static void Run(Algoritms alg, int ammount, int size, double prc, bool reverse, bool Mo3);
 
 };
 
 template<typename T>
-void Experiment<T>::Run(Algoritms alg, int ammount, int size, double prc, bool reverse)
+void Experiment<T>::Run(Algoritms alg, int ammount, int size, double prc, bool reverse, bool Mo3)
 {
 	Array<T> arr(size);
 	std::ofstream file;
@@ -37,6 +37,8 @@ void Experiment<T>::Run(Algoritms alg, int ammount, int size, double prc, bool r
 	{
 		if (reverse)
 			arr.GenerateReverse();
+		else if (Mo3)
+			arr.Mo3Killer();
 		else
 		{
 			if (prc > 1 || prc < 0)

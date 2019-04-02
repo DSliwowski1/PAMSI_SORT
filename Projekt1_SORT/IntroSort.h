@@ -58,8 +58,6 @@ T IntroSortT<T>::PickPivot(Array<T>& arr, int l, int r)
 	if (arr[m] < arr[r])
 		arr.Swap(m, r);
 
-	//cout << arr[r] << endl;
-
 	return arr[r];
 }
 

@@ -12,7 +12,7 @@ namespace UI
 	{
 		int ammount, size;
 		double prc;
-		bool reverse;
+		bool reverse = false, Mo3Killer = false;
 		int type, tmp;
 
 		cout << "Program do testowania sortowan liczb ca³kowitych" << endl;
@@ -24,7 +24,6 @@ namespace UI
 		cout << "0 - MergeSort \n1 - QuickSort \n2 - IntroSort " << endl;
 		
 		cin >> type;
-		//cout << type << endl;
 
 		if (type != 0 && type != 1 && type != 2)
 		{
@@ -51,7 +50,7 @@ namespace UI
 		}
 
 		cout << "Czy tablice maja byc w odwroconej kolejnosci?" << endl;
-		cout << "0 - tak \n1 - nie" << endl;
+		cout << "0 - tak \n1 - nie\n2 - Mo3Killer" << endl;
 		cin >> tmp;
 
 		if (tmp == 0)
@@ -61,6 +60,10 @@ namespace UI
 		else if (tmp == 1)
 		{
 			reverse = false;
+		}
+		else if (tmp == 2)
+		{
+			Mo3Killer = true;
 		}
 		else
 		{
@@ -79,7 +82,7 @@ namespace UI
 
 		cout << "Trwa badanie!" << endl;
 
-		Experiment<int>::Run(static_cast<Experiment<int>::Algoritms>(type), ammount, size, prc, reverse);
+		Experiment<int>::Run(static_cast<Experiment<int>::Algoritms>(type), ammount, size, prc, reverse, Mo3Killer);
 
 		cout << "Dane zostaly zapisane w folderze z programem." << endl;
 		cout << "Czy chce wyjœæ?" << endl;
